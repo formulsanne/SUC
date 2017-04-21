@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 这些action需要由spring进行管理 -->
+	<constant name="struts.objectFactory.spring.autoWire.alwaysRespect"
+		value="true" />
+	<include file="com/config/struts/base.xml"></include>
+	<include file="com/config/struts/login.xml"></include>
+	<include file="com/config/struts/main.xml"></include>
+	<include file="com/config/struts/uploadAnddownload.xml"></include>
+	<include file="com/config/struts/other.xml"></include>
+
+	
+	<constant name="struts.action.excludePattern"  value="/websocket*,^ws://.$" />
+
+	
+</struts>
